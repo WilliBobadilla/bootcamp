@@ -1,3 +1,7 @@
+#_*_ coding: utf-8 _*_
+
+
+
 """autor: Williams bobadilla
    fecha de creacion: 27-enero-2019
    fecha de ultima edicion: 27-enero-2019 
@@ -33,4 +37,5 @@ while True:
 		else: 
 			gpio.output(lista[i],True)
 		sleep(1)                                  #pausa de 1 segundo 
+	gpio.output(lista[i],False)
 	#Este programa finaliza cuando hay una interrupcion por teclado, CTRL+C
