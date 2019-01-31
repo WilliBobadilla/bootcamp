@@ -1,3 +1,6 @@
+
+# _*_ coding: utf-8 -*-
+
 """autor: Williams Bobadilla
    fecha de creacion: 24-enero-2019
    fecha de ultima edicion: 27-enero-2019
@@ -35,3 +38,4 @@ while True:
 	sleep(1)
 
 	#Este programa finaliza cuando hay una interrupcion por teclado, CTRL+C
+gpio.cleanup()
