@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 """autor: Williams Bobadilla
    fecha de creacion: 24-enero-2019
    fecha de ultima edicion: 
@@ -24,5 +26,6 @@ while True:
 	gpio.output(led1,False)    #apagamos el led1
 	sleep(1)                   # pausa de un segundo
 
+gpio.cleanup()                    #limpiamos el gpio
 	#Este programa finaliza cuando hay una interrupcion por teclado, CTRL+C
 		
