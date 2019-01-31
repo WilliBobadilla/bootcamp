@@ -1,3 +1,7 @@
+
+#_*_ coding: utf-8 _*_
+
+
 """autor: Williams Bobadilla
    fecha de creacion: 27-enero-2019
    fecha de ultima edicion:  27-enero-2019
