@@ -1,3 +1,5 @@
+#_*_ coding:utf-8 _*_
+
 """autor: Williams bobadilla
    fecha de creacion: 28-enero-2019
    fecha de ultima edicion: 28-enero-2019 
@@ -32,6 +34,7 @@ contador=0                      #variable para manejo de los leds
 while True:                             
    if gpio.input(entrada):              #si se presiona es True, entra en esa linea  
 	  contador=contador+1               #aumentamos la variable contador
+	  sleep(0.3)                         #agregamos una pausa para evitar que sume muy rapido
 	  if contador==4:					#como solo tenemos 3 leds, contador debe tomar los valores 0,1,2
 	  	 contador=0				 		#pero usamos el 3 para apagar todos los leds
 	  	 						        #reinicimamos al primer led
