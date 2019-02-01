@@ -1,3 +1,5 @@
+#_*_ coding: utf-8 _*_
+
 """autor: Williams bobadilla
    fecha de creacion: 28-enero-2019
    fecha de ultima edicion: 28-enero-2019 
@@ -30,3 +32,4 @@ while True:
       gpio.output(led1, True)             
    else:
       gpio.output(led1, False)      
+gpio.cleanup()
