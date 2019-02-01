@@ -33,7 +33,7 @@ gpio.setmode(gpio.BCM) 			# modo BCM de la raspberry pi
 
 def DHT22_data():
 	# leemos los datos del sensor, la humedad y la temperatura
-	humi, temp = dht.read_retry(dht.DHT22, 23)    #pin data conectado al GPIO23
+	humi, temp = dht.read_retry(dht.DHT22, 23)    #pin data conectado al GPIO23, si se usa el DHT11, usamos dht.DHT11
 	return humi, temp 
 
 while True:
