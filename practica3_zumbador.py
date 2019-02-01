@@ -1,3 +1,4 @@
+
 # _*_ coding: utf-8 _*_
 
 
@@ -24,13 +25,14 @@ gpio.setmode(gpio.BCM) 			# modo BCM  de la raspberry pi
  
 gpio.setup(buzzer,gpio.OUT)       #configuramos los puertos conectador a los leds como salida
 
-tono=gpio.PWM(buzzer,100)        # inicializamos el objeto tono en el pin del buzzer con 
+tono=gpio.PWM(buzzer,1000)        # inicializamos el objeto tono en el pi del buzzer , ademas especificamos la frecuencia 
 
-tono.start(5)                    # iniciamos el tono en 5 
-while True: 
-	tono.ChangeDutyCycle(15)     # cambiamos el ciclo de trabajo
-	sleep(1)
-	tono.ChangeDutyCycle(90)
-	sleep(1)
+tono.start(0)             #        comenzamos con el 0 %del ciclo de trabajo              
+lista=[15,25,45,60,75]
+
+while True:
+     for i in range(len(lista)):    
+         tono.ChangeDutyCycle(lista[i])     # cambiamos el ciclo de trabajo 
+	 sleep(1)
 	
 
