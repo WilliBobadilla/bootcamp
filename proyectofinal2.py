@@ -35,7 +35,7 @@ myAPI = '8QWHS6O1IKEOTWOU'
 baseURL = 'https://api.thingspeak.com/update?api_key=%s' % myAPI # URL donde enviaremos los datos, no borrar esto!
 def DHT22_data():
 	# leemos los datos del sensor, la humedad y la temperatura
-	humi, temp = dht.read_retry(dht.DHT22, 23) #pin data conectado al GPIO23
+	humi, temp = dht.read_retry(dht.DHT22, 23) #pin data conectado al GPIO23, si usamos el dht11, usar dht.DHT11
 	return humi, temp 
 
 while True:
@@ -44,7 +44,7 @@ while True:
 		# si la lectura es valida, hacemos todo esto
 		while temperatura<24 or temperatura>27:  		#si no está en el rango normal, suena una alarma
 			gpio.output(buzzer,True)			 # encendemos un led en modo de advertencia
-			print("willi yo apague mi aire por vos")
+			print("La temperatura está fuera del rango: " + str(temperatura))  
 			humedad,temperatura=DHT22_data()  # volvemos a leer los sensores
 		
 		gpio.output(buzzer,False)              #apagamos el aviso
